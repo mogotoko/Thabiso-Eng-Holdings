@@ -86,15 +86,21 @@
     /* Navigation menu */
     nav.nav {
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
       gap: 22px;
       background: linear-gradient(to right, #0a0f1f, #1b2a4b);
       padding: 12px;
       border-radius: 8px;
+      position: relative;
     }
 
-    nav.nav a {
+    .nav-links {
+      display: flex;
+      gap: 22px;
+    }
+
+    .nav-links a {
       color: #ffffff;
       font-weight: bold;
       text-decoration: none;
@@ -103,7 +109,7 @@
       transition: color 0.3s ease;
     }
 
-    nav.nav a::after {
+    .nav-links a::after {
       content: '';
       display: block;
       height: 2px;
@@ -115,24 +121,49 @@
       left: 0;
     }
 
-    nav.nav a:hover {
+    .nav-links a:hover {
       color: #00bfff;
     }
 
-    nav.nav a:hover::after {
+    .nav-links a:hover::after {
       width: 100%;
     }
 
-    /* Responsive */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    /* Responsive: hamburger menu */
     @media (max-width: 768px) {
-      nav.nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
+      .menu-toggle {
+        display: block;
       }
 
-      main.container {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0a0f1f;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 220px;
         padding: 12px;
+        border-radius: 6px;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-links a {
+        margin: 10px 0;
+        font-size: 1.1rem;
       }
     }
   </style>
@@ -144,14 +175,17 @@
       <a href="index.html"><img src="assets/images/logo/logo.png" alt="Thabiso logo"></a>
     </div>
     <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="careers.html">Careers</a>
-      <a href="contact.html">Contact</a>
-      <a href="blog.html">Blog</a>
-      <a href="downloads.html">Downloads</a>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
+        <a href="blog.html">Blog</a>
+        <a href="downloads.html">Downloads</a>
+      </div>
     </nav>
   </div>
 </header>
@@ -231,6 +265,14 @@
     </div>
   </div>
 </footer>
+
+<script>
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  toggleBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
 
 <script src='assets/js/main.js'></script>
 </body>
