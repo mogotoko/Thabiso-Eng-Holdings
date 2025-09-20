@@ -2,9 +2,53 @@
 <html>
 <head>
   <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
   <title>Thabiso Holdings</title>
   <link rel='stylesheet' href='assets/css/style.css'>
+  <style>
+    /* Mobile menu styles */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0a0f1f;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 220px;
+        padding: 12px;
+        border-radius: 6px;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-links a {
+        margin: 10px 0;
+        font-size: 1.1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 <header class="header">
@@ -12,28 +56,25 @@
     <div class="logo">
       <a href="index.html"><img src="assets/images/logo/logo.png" alt="Thabiso logo"></a>
     </div>
-    <!-- Hamburger Menu Button -->
-    <button class="menu-toggle">☰</button>
-    <!-- Navigation -->
     <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="careers.html">Careers</a>
-      <a href="contact.html">Contact</a>
-      <a href="blog.html">Blog</a>
-      <a href="downloads.html">Downloads</a>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
+        <a href="blog.html">Blog</a>
+        <a href="downloads.html">Downloads</a>
+      </div>
     </nav>
   </div>
 </header>
 
-<section class='hero'>
-  <canvas id='matrix'></canvas>
+<section class='hero'><canvas id='matrix'></canvas>
   <div class='hero-content container'>
-    <h1>Telecommunication & Engineering<br/>
-      <span class='accent'>Creative — Reliable — Certified</span>
-    </h1>
+    <h1>Telecommunication & Engineering<br/><span class='accent'>Creative — Reliable — Certified</span></h1>
     <p>ISO 9001:2015 • Company Reg. No: 2007/013421/07</p>
     <a class='btn' href='services.html'>Our Services</a>
     <div class='social-row' style='margin-top:22px'>
@@ -54,19 +95,14 @@
   </div>
 </footer>
 
-<script src='assets/js/main.js'></script>
-
-<!-- Mobile Menu Script -->
 <script>
-const toggleBtn = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.nav');
-
-if (toggleBtn) {
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
   toggleBtn.addEventListener('click', () => {
-    nav.classList.toggle('active');
-    document.body.classList.toggle('menu-open');
+    navLinks.classList.toggle('show');
   });
-}
 </script>
+
+<script src='assets/js/main.js'></script>
 </body>
 </html>
