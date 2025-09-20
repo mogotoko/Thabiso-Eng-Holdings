@@ -5,124 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Thabiso Holdings</title>
   <link rel="stylesheet" href="assets/css/style.css">
-
-  <style>
-    /* Header styles */
-    .header {
-      background: #001428;
-      padding: 12px 0;
-    }
-
-    .header .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo img {
-      height: 60px;
-    }
-
-    /* Desktop navigation */
-    .nav {
-      display: flex;
-      gap: 18px;
-    }
-
-    .nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    /* Hamburger button */
-    .menu-toggle {
-      display: none;
-      font-size: 28px;
-      background: none;
-      border: none;
-      color: #fff;
-      cursor: pointer;
-    }
-
-    /* Mobile styles */
-    @media (max-width: 768px) {
-      .nav {
-        display: none;
-        flex-direction: column;
-        gap: 12px;
-        background: #001428;
-        padding: 15px;
-        border-radius: 8px;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        width: 200px;
-      }
-
-      .nav.active {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-    }
-  </style>
 </head>
 <body>
+
 <header class="header">
   <div class="container">
-    <div class="logo">
-      <a href="index.html"><img src="assets/images/logo/logo.png" alt="Thabiso logo"></a>
-    </div>
-
-    <!-- Hamburger button -->
+    <div class="logo"><a href="index.html"><img src="assets/images/logo/logo.png" alt="Thabiso logo"></a></div>
     <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
-
-    <!-- Navigation -->
     <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="careers.html">Careers</a>
-      <a href="contact.html">Contact</a>
-      <a href="blog.html">Blog</a>
-      <a href="downloads.html">Downloads</a>
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a>
+      <a href="blog.html">Blog</a><a href="downloads.html">Downloads</a>
     </nav>
   </div>
 </header>
 
 <main class="container">
-  <h1>Telecommunication & Engineering</h1>
-  <p>Creative — Reliable — Certified</p>
-  <p>ISO 9001:2015 • Company Reg. No: 2007/013421/07</p>
-  <a href="services.html" class="btn">Our Services</a>
-
-  <div class="social-row" style="margin-top:20px">
-    <a href="https://wa.me/27844286455" target="_blank"><img src="assets/icons/whatsapp.svg" alt="WA" width="44"></a>
-    <a href="https://facebook.com" target="_blank"><img src="assets/icons/facebook.svg" alt="FB" width="44"></a>
-    <a href="https://tiktok.com" target="_blank"><img src="assets/icons/tiktok.svg" alt="TT" width="44"></a>
-    <a href="mailto:info@thabisoholding.co.za"><img src="assets/icons/email.svg" alt="Email" width="44"></a>
-  </div>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Telecommunication & Engineering</h1>
+      <span class="accent">Creative — Reliable — Certified</span>
+      <p>ISO 9001:2015 • Company Reg. No: 2007/013421/07</p>
+      <a href="services.html" class="btn">Our Services</a>
+    </div>
+  </section>
 </main>
 
 <footer class="footer">
-  <div class="container" style="display:flex;justify-content:space-between;align-items:center">
-    <div>Thabiso Holdings — 272 Van Der Hoff Str, Hermanstad, Pretoria, 0082</div>
-    <div>© 2025 Thabiso Holdings</div>
-  </div>
+  <div class="container"><div>Thabiso Holdings — 272 Van Der Hoff Str, Hermanstad, Pretoria, 0082</div><div>© 2025 Thabiso Holdings</div></div>
 </footer>
 
-<script src="assets/js/main.js"></script>
 <script>
-  const toggleBtn = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.nav');
-
-  toggleBtn.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
+  const toggleBtn=document.querySelector('.menu-toggle');const nav=document.querySelector('.nav');
+  toggleBtn.addEventListener('click',()=>{nav.classList.toggle('active');});
 </script>
 </body>
 </html>
