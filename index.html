@@ -7,7 +7,7 @@
   <link rel='stylesheet' href='assets/css/style.css'>
   <style>
     html { scroll-behavior: smooth; }
-    body { background: #ffffff; color: #000000; font-family: Arial, sans-serif; margin:0; }
+    body { margin:0; font-family: Arial, sans-serif; }
 
     section { padding: 60px 20px; max-width: 1100px; margin: auto; }
     h1, h2 { text-align: center; margin-bottom: 20px; }
@@ -26,12 +26,26 @@
       .nav-links a{margin:10px 0; font-size:1.1rem;}
     }
 
-    /* Gallery & Grid */
+    /* Hero (Matrix animation background) */
+    .hero { position:relative; height:90vh; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; overflow:hidden; }
+    #matrix { position:absolute; inset:0; width:100%; height:100%; z-index:0; background:#071026; }
+    .hero-content { position:relative; z-index:2; padding:20px; }
+
+    /* White sections */
+    #about, #services, #gallery, #careers, #contact, #blog, #downloads {
+      background:#fff;
+      color:#000;
+    }
+
+    /* Grids */
     .gallery-grid,.management-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
     .gallery-card,.profile{background:#f9f9f9;border-radius:10px;padding:14px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.08);}
     .gallery-card img{width:100%;border-radius:8px;}
     .team-photo{width:150px;height:150px;border-radius:50%;object-fit:cover;margin-bottom:10px;}
+
+    /* Forms */
     .form-field{width:100%;padding:10px;margin:8px 0;border-radius:8px;border:1px solid #ccc;}
+    .btn{background:#00bfff;color:#00121a;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:bold;display:inline-block;margin-top:12px;border:none;cursor:pointer;}
 
     footer{background:#0a0f1f;color:#fff;padding:20px;text-align:center;}
   </style>
@@ -40,7 +54,7 @@
 <header class="header">
   <div class="container" style="display:flex;justify-content:space-between;align-items:center;padding:12px;">
     <div class="logo">
-      <a href="#"><img src="assets/images/logo/logo.png" alt="Thabiso logo" style="height:70px;"></a>
+      <a href="#home"><img src="assets/images/logo/logo.png" alt="Thabiso logo" style="height:70px;"></a>
     </div>
     <nav class="nav">
       <button class="menu-toggle" aria-label="Toggle menu">☰</button>
@@ -58,11 +72,14 @@
   </div>
 </header>
 
-<!-- Hero -->
-<section id="home" class="hero" style="text-align:center;padding:80px 20px;background:#071026;color:#fff;">
-  <h1>Telecommunication & Engineering<br><span style="color:#00bfff;">Creative — Reliable — Certified</span></h1>
-  <p>ISO 9001:2015 • Company Reg. No: 2007/013421/07</p>
-  <a class="btn" href="#services" style="background:#00bfff;padding:12px 24px;border-radius:8px;color:#00121a;font-weight:bold;text-decoration:none;">Our Services</a>
+<!-- Hero / Home with Matrix Animation -->
+<section id="home" class="hero">
+  <canvas id="matrix"></canvas>
+  <div class="hero-content">
+    <h1>Telecommunication & Engineering<br><span style="color:#00bfff;">Creative — Reliable — Certified</span></h1>
+    <p>ISO 9001:2015 • Company Reg. No: 2007/013421/07</p>
+    <a class="btn" href="#services">Our Services</a>
+  </div>
 </section>
 
 <!-- About -->
@@ -106,7 +123,7 @@
     <input class="form-field" type="email" placeholder="Email">
     <input class="form-field" placeholder="Cellphone">
     <textarea class="form-field" placeholder="Brief message"></textarea>
-    <button class="btn" type="submit" style="background:#00bfff;padding:12px 24px;border:none;border-radius:8px;cursor:pointer;">Apply</button>
+    <button class="btn" type="submit">Apply</button>
   </form>
 </section>
 
@@ -120,7 +137,7 @@
     <input class="form-field" placeholder="Your name">
     <input class="form-field" type="email" placeholder="Your email">
     <textarea class="form-field" placeholder="Message"></textarea>
-    <button class="btn" type="submit" style="background:#00bfff;padding:12px 24px;border:none;border-radius:8px;cursor:pointer;">Send</button>
+    <button class="btn" type="submit">Send</button>
   </form>
 </section>
 
@@ -143,10 +160,48 @@
 </footer>
 
 <script>
+  // Mobile menu toggle
   const toggleBtn = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
   toggleBtn.addEventListener('click', () => {
     navLinks.classList.toggle('show');
+  });
+
+  // Matrix rain animation
+  const canvas = document.getElementById('matrix');
+  const ctx = canvas.getContext('2d');
+  canvas.height = window.innerHeight;
+  canvas.width = window.innerWidth;
+
+  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%';
+  const fontSize = 16;
+  const columns = canvas.width / fontSize;
+  const drops = Array(Math.floor(columns)).fill(1);
+
+  function draw() {
+    ctx.fillStyle = 'rgba(7,16,38,0.08)'; // fade effect
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = '#00bfff';
+    ctx.font = fontSize + 'px monospace';
+
+    for (let i = 0; i < drops.length; i++) {
+      const text = letters.charAt(Math.floor(Math.random() * letters.length));
+      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        drops[i] = 0;
+      }
+      drops[i]++;
+    }
+  }
+
+  setInterval(draw, 33);
+
+  // Resize canvas on window resize
+  window.addEventListener('resize', () => {
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
   });
 </script>
 </body>
