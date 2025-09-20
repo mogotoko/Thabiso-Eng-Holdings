@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Blog - Thabiso Holdings</title>
+  <link rel='stylesheet' href='assets/css/style.css'>
+  <style>
+    body, main {
+      background-color: #ffffff !important;
+      color: #000000 !important;
+      font-family: Arial, sans-serif;
+    }
+
+    main.container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    /* Blog card layout */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .blog-card {
+      background: #f9f9f9;
+      border-radius: 10px;
+      padding: 18px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+
+    .blog-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.3rem;
+    }
+
+    .blog-card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #333;
+    }
+
+    .blog-card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #00bfff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .blog-card a:hover {
+      color: #005f99;
+    }
+
+    /* Navigation menu */
+    nav.nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 22px;
+      background: linear-gradient(to right, #0a0f1f, #1b2a4b);
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+    nav.nav a {
+      color: #ffffff;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1rem;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav.nav a::after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 0;
+      background: #00bfff;
+      transition: width 0.3s ease;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+    }
+
+    nav.nav a:hover {
+      color: #00bfff;
+    }
+
+    nav.nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav.nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+
+      main.container {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <a href="index.html"><img src="assets/images/logo/logo.png" alt="Thabiso logo"></a>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+      <a href="blog.html">Blog</a>
+      <a href="downloads.html">Downloads</a>
+    </nav>
+  </div>
+</header>
+
+<main class='container'>
+  <h1>News & Updates</h1>
+
+  <div class="blog-grid">
+    <div class="blog-card">
+      <h3>New Telecommunications Project</h3>
+      <p>We’ve recently secured a major telecommunications project in Pretoria, expanding network coverage for businesses and communities.</p>
+      <a href="#">Read More</a>
+    </div>
+    <div class="blog-card">
+      <h3>Battery Installation Success</h3>
+      <p>Our team successfully deployed backup power systems for critical facilities ensuring uninterrupted service delivery.</p>
+      <a href="#">Read More</a>
+    </div>
+    <div class="blog-card">
+      <h3>Hiring: RF Technicians</h3>
+      <p>We’re growing! Join our engineering team as an RF Technician. Competitive benefits and growth opportunities available.</p>
+      <a href="#">Read More</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+      <div>Thabiso Holdings — 272 Van Der Hoff Str, Hermanstad, Pretoria, 0082</div>
+      <div>© 2025 Thabiso Holdings</div>
+    </div>
+  </div>
+</footer>
+<script src='assets/js/main.js'></script>
+</body>
+</html>

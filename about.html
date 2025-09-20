@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>About - Thabiso Holdings</title>
+  <link rel='stylesheet' href='assets/css/style.css'>
+  <style>
+    body, main {
+      background-color: #ffffff !important;
+      color: #000000 !important;
+      font-family: Arial, sans-serif;
+    }
+
+    main.container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    /* Management grid */
+    .management-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .profile {
+      background: #f9f9f9;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .profile:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+
+    .team-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 12px;
+    }
+
+    .profile h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      color: #0a0f1f;
+    }
+
+    .profile div {
+      font-weight: bold;
+      margin-top: 4px;
+      margin-bottom: 8px;
+      color: #555;
+    }
+
+    .profile p {
+      font-size: 0.9rem;
+      color: #444;
+      line-height: 1.5;
+      text-align: center;
+      margin: 0;
+    }
+
+    /* Navigation menu */
+    nav.nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 22px;
+      background: linear-gradient(to right, #0a0f1f, #1b2a4b);
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+    nav.nav a {
+      color: #ffffff;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1rem;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav.nav a::after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 0;
+      background: #00bfff;
+      transition: width 0.3s ease;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+    }
+
+    nav.nav a:hover {
+      color: #00bfff;
+    }
+
+    nav.nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav.nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+
+      main.container {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <a href="index.html"><img src="assets/images/logo/logo.png" alt="Thabiso logo"></a>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+      <a href="blog.html">Blog</a>
+      <a href="downloads.html">Downloads</a>
+    </nav>
+  </div>
+</header>
+
+<main class='container'>
+  <h1>About Us</h1>
+  <p>Thabiso Holdings provides specialist telecommunication and engineering services across South Africa. 
+     We deliver design, installation and ongoing support with ISO 9001:2015 certified processes.</p>
+
+  <h2>Management Team</h2>
+  <div class='management-grid'>
+
+    <div class='profile'>
+      <img src='assets/images/management/manager_1.jpeg' alt='Manager 1' class="team-photo">
+      <h3>CEO</h3>
+      <div>Abram Moleke</div>
+      <p>Provides strategic leadership and ensures Thabiso Engineering delivers innovative, reliable, and client-focused solutions.</p>
+    </div>
+
+    <div class='profile'>
+      <img src='assets/images/management/manager_2.jpeg' alt='Manager 2' class="team-photo">
+      <h3>Sales and Marketing</h3>
+      <div>Peter Buthelezi</div>
+      <p>Drives growth by connecting client needs with tailored telecommunications and engineering services.</p>
+    </div>
+
+    <div class='profile'>
+      <img src='assets/images/management/manager_3.jpeg' alt='Manager 3' class="team-photo">
+      <h3>Financial Manager</h3>
+      <div>Tumelo Buthelezi</div>
+      <p>Manages financial planning, reporting, and control to ensure sustainability, transparency, and growth for Thabiso Engineering.</p>
+    </div>
+
+    <div class='profile'>
+      <img src='assets/images/management/manager_4.jpeg' alt='Manager 4' class="team-photo">
+      <h3>HR Manager</h3>
+      <div>Caroline Tiro</div>
+      <p>Builds a strong, skilled team and fosters a culture of excellence to support client success.</p>
+    </div>
+
+    <div class='profile'>
+      <img src='assets/images/management/manager_5.jpeg' alt='Manager 5' class="team-photo">
+      <h3>Operations Manager</h3>
+      <div>Frans Gafane</div>
+      <p>Oversees project delivery, ensuring efficiency, quality, and on-time completion.</p>
+    </div>
+
+    <div class='profile'>
+      <img src='assets/images/management/manager_6.jpeg' alt='Manager 6' class="team-photo">
+      <h3>Safety Officer</h3>
+      <div>Stephen Phalane</div>
+      <p>Upholds the highest safety standards, ensuring compliance and secure project environments.</p>
+    </div>
+
+    <div class='profile'>
+      <img src='assets/images/management/manager_7.jpeg' alt='Manager 7' class="team-photo">
+      <h3>Manager 7</h3>
+      <div>Position Title</div>
+      <p>Maintains client relationships, ensuring expectations are clearly understood and exceeded.</p>
+    </div>
+
+    <div class='profile'>
+      <img src='assets/images/management/manager_8.jpeg' alt='Manager 8' class="team-photo">
+      <h3>Manager 8</h3>
+      <div>Position Title</div>
+      <p>Experienced professional with a strong track record in the industry.</p>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+      <div>Thabiso Holdings — 272 Van Der Hoff Str, Hermanstad, Pretoria, 0082</div>
+      <div>© 2025 Thabiso Holdings</div>
+    </div>
+  </div>
+</footer>
+
+<script src='assets/js/main.js'></script>
+</body>
+</html>

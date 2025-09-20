@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Careers - Thabiso Holdings</title>
+  <link rel='stylesheet' href='assets/css/style.css'>
+  <style>
+    body, main {
+      background-color: #ffffff !important;
+      color: #000000 !important;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Center main content */
+    main.container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Careers panel */
+    .careers-panel {
+      margin: 24px auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Styled application form */
+    .simulate-form {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 0 auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: left;
+      width: 100%;
+      max-width: 720px;
+    }
+
+    .form-field {
+      background-color: #ffffff !important;
+      border: 2px solid #444 !important;
+      color: #000000 !important;
+      padding: 12px;
+      border-radius: 6px;
+      margin-bottom: 16px;
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 1rem;
+    }
+
+    textarea.form-field {
+      min-height: 120px;
+    }
+
+    .form-field::placeholder {
+      color: #555 !important;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 6px;
+      text-align: left;
+    }
+
+    /* Job positions */
+    .careers-positions {
+      margin-top: 24px;
+      text-align: left;
+    }
+
+    .careers-positions h3 {
+      margin-bottom: 12px;
+      font-size: 1.3rem;
+    }
+
+    .careers-positions ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .careers-positions li {
+      background: #f1f1f1;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 12px;
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    /* Navigation menu */
+    nav.nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 22px;
+      background: linear-gradient(to right, #0a0f1f, #1b2a4b);
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+    nav.nav a {
+      color: #ffffff;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1rem;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav.nav a::after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 0;
+      background: #00bfff;
+      transition: width 0.3s ease;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+    }
+
+    nav.nav a:hover {
+      color: #00bfff;
+    }
+
+    nav.nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+      nav.nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .simulate-form {
+        padding: 15px;
+      }
+
+      main.container {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <a href="index.html"><img src="assets/images/logo/logo.png" alt="Thabiso logo"></a>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+      <a href="blog.html">Blog</a>
+      <a href="downloads.html">Downloads</a>
+    </nav>
+  </div>
+</header>
+
+<main class='container'>
+  <h1>Careers</h1>
+  <p>Apply by filling out the form below.</p>
+  <div class="careers-panel">
+    <form class='simulate-form' enctype='multipart/form-data'>
+      <input class='form-field' name='first_name' placeholder='First name' required>
+      <input class='form-field' name='last_name' placeholder='Last name' required>
+      <input class='form-field' name='email' type='email' placeholder='Email' required>
+      <input class='form-field' name='cellphone' placeholder='Cellphone' required>
+      <label>Upload CV (PDF, DOC)</label>
+      <input class='form-field' name='cv' type='file' accept='.pdf,.doc,.docx'>
+      <textarea class='form-field' name='message' placeholder='Brief message' required></textarea>
+      <button class='btn' type='submit'>Apply</button>
+    </form>
+  </div>
+
+  <p style='margin-top:12px'>Or contact HR: <strong>info@thabisoholding.co.za</strong> | Cell: </p>
+
+  <div class="careers-positions">
+    <h3>Positions Available</h3>
+    <ul>
+      <li><strong>RF Technician</strong><br/>Install, maintain and test RF systems. Requires telecom experience. Location: South Africa.</li>
+      <li><strong>Battery Installation Technician</strong><br/>Install and maintain backup power systems. Electrical safety knowledge required. Location: South Africa.</li>
+    </ul>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+      <div>Thabiso Holdings — 272 Van Der Hoff Str, Hermanstad, Pretoria, 0082</div>
+      <div>© 2025 Thabiso Holdings</div>
+    </div>
+  </div>
+</footer>
+<script src='assets/js/main.js'></script>
+</body>
+</html>

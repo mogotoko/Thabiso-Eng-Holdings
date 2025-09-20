@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Contact - Thabiso Holdings</title>
+  <link rel='stylesheet' href='assets/css/style.css'>
+  <style>
+    body, main {
+      background-color: #ffffff !important;
+      color: #000000 !important;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Center the main content */
+    main.container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Bold and centered address panel */
+    .contact-panel {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    /* Improved form styling */
+    .simulate-form {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 0 auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    .form-field {
+      background-color: #ffffff !important;
+      border: 2px solid #444 !important; /* stronger border */
+      color: #000000 !important;
+      padding: 12px;
+      border-radius: 6px;
+      margin-bottom: 16px;
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 1rem;
+    }
+
+    .form-field::placeholder {
+      color: #555 !important;
+      font-size: 0.95rem;
+    }
+
+    textarea.form-field {
+      min-height: 120px;
+    }
+
+    /* Center form and address block */
+    .form-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Better navigation menu */
+    nav.nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 22px;
+      background: linear-gradient(to right, #0a0f1f, #1b2a4b);
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+    nav.nav a {
+      color: #ffffff;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1rem;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav.nav a::after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 0;
+      background: #00bfff;
+      transition: width 0.3s ease;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+    }
+
+    nav.nav a:hover {
+      color: #00bfff;
+    }
+
+    nav.nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Social icons row */
+    .social-row {
+      margin-top: 22px;
+    }
+
+    /* Mobile responsive tweaks */
+    @media (max-width: 768px) {
+      nav.nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .simulate-form {
+        width: 100%;
+        padding: 15px;
+      }
+
+      main.container {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <a href="index.html"><img src="assets/images/logo/logo.png" alt="Thabiso logo"></a>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+      <a href="blog.html">Blog</a>
+      <a href="downloads.html">Downloads</a>
+    </nav>
+  </div>
+</header>
+
+<main class='container'>
+  <h1>Contact Us</h1>
+  <div class='form-wrapper'>
+    <div class='contact-panel'>
+      <p><strong>Address:</strong> 272 Van Der Hoff Str, Hermanstad, Pretoria, 0082</p>
+      <p><strong>Cell:</strong> 072 182 9620</p>
+      <p><strong>Email:</strong> thabisoengineering@yahoo.com </p>
+      <p><strong>Company emails:</strong> info@thabisoholding.co.za, sales@thabisoholding.co.za, accounts@thabisoholding.co.za</p>
+    </div>
+
+    <iframe src='https://maps.google.com/maps?q=272+Van+Der+Hoff+Str+Hermanstad+Pretoria+0082&output=embed' width='100%' height='280' style='border:0;margin-top:12px;border-radius:8px'></iframe>
+
+    <h2 style='margin-top:24px; margin-bottom:16px;'>Send us a message</h2>
+    <form class='simulate-form' style='max-width:720px;'>
+      <input class='form-field' name='name' placeholder='Your name' required>
+      <input class='form-field' name='email' type='email' placeholder='Your email' required>
+      <select class='form-field' name='category'>
+        <option>Telecommunication</option>
+        <option>Engineering</option>
+      </select>
+      <select class='form-field' name='department'>
+        <option data-email='info@thabisoholding.co.za'>Info</option>
+        <option data-email='sales@thabisoholding.co.za'>Sales</option>
+        <option data-email='accounts@thabisoholding.co.za'>Accounts</option>
+      </select>
+      <textarea class='form-field' name='message' placeholder='Message' required></textarea>
+      <button class='btn' type='submit'>Send</button>
+    </form>
+  </div>
+
+  <div class='social-row'>
+    <a href='https://wa.me/0730683873' target='_blank'><img src='assets/icons/whatsapp.svg' alt='WA' width='44'></a>
+    <a href='https://facebook.com' target='_blank'><img src='assets/icons/facebook.svg' alt='FB' width='44'></a>
+    <a href='https://tiktok.com' target='_blank'><img src='assets/icons/tiktok.svg' alt='TT' width='44'></a>
+    <a href='mailto:info@thabisoholding.co.za'><img src='assets/icons/email.svg' alt='Email' width='44'></a>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+      <div>Thabiso Holdings — 272 Van Der Hoff Str, Hermanstad, Pretoria, 0082</div>
+      <div>© 2025 Thabiso Holdings Designed by: Frans</div>
+    </div>
+  </div>
+</footer>
+<script src='assets/js/main.js'></script>
+</body>
+</html>
