@@ -1,184 +1,283 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Thabiso Holdings</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thabiso Holdings — One Page</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-<header class="header">
-  <div class="container">
-    <div class="logo">
-      <a href="#home"><img src="assets/images/logo/logo.png" alt="Thabiso logo"></a>
+
+  <!-- Header / Nav (sticky) -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="#home"><img src="assets/images/logo/logo.png" alt="Thabiso logo" /></a>
+      </div>
+
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <nav class="nav" role="navigation" aria-label="Main">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#careers">Careers</a>
+        <a href="#contact">Contact</a>
+        <a href="#blog">Blog</a>
+        <a href="#downloads">Downloads</a>
+      </nav>
     </div>
-    <button class="menu-toggle">☰</button>
-    <nav class="nav">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#careers">Careers</a>
-      <a href="#contact">Contact</a>
-      <a href="#blog">Blog</a>
-      <a href="#downloads">Downloads</a>
-    </nav>
-  </div>
-</header>
+  </header>
 
-<!-- Hero -->
-<section id="home" class="hero">
-  <canvas id="matrix"></canvas>
-  <div class="hero-content container">
-    <h1>Telecommunication & Engineering<br><span class="accent">Creative — Reliable — Certified</span></h1>
-    <p>ISO 9001:2015 • Company Reg. No: 2007/013421/07</p>
-    <a class="btn" href="#services">Our Services</a>
-    <div class="social-row" style="margin-top:22px">
-      <a href="https://wa.me/27844286455" target="_blank"><img src="assets/icons/whatsapp.svg" width="44" alt="WhatsApp"></a>
-      <a href="https://facebook.com" target="_blank"><img src="assets/icons/facebook.svg" width="44" alt="Facebook"></a>
-      <a href="https://tiktok.com" target="_blank"><img src="assets/icons/tiktok.svg" width="44" alt="TikTok"></a>
-      <a href="mailto:info@thabisoholding.co.za"><img src="assets/icons/email.svg" width="44" alt="Email"></a>
+  <!-- HERO / HOME (matrix canvas) -->
+  <section id="home" class="hero">
+    <canvas id="matrix" aria-hidden="true"></canvas>
+
+    <div class="hero-content container">
+      <h1>Telecommunication &amp; Engineering<br />
+        <span class="accent">Creative — Reliable — Certified</span>
+      </h1>
+      <p class="lead">ISO 9001:2015 • Company Reg. No: 2007/013421/07</p>
+      <a class="btn" href="#services">Our Services</a>
+
+      <div class="social-row" aria-hidden="false" style="margin-top:18px;">
+        <a href="https://wa.me/27844286455" target="_blank" rel="noopener"><img src="assets/icons/whatsapp.svg" alt="WhatsApp" width="44"></a>
+        <a href="https://facebook.com" target="_blank" rel="noopener"><img src="assets/icons/facebook.svg" alt="Facebook" width="44"></a>
+        <a href="https://tiktok.com" target="_blank" rel="noopener"><img src="assets/icons/tiktok.svg" alt="TikTok" width="44"></a>
+        <a href="mailto:info@thabisoholding.co.za"><img src="assets/icons/email.svg" alt="Email" width="44"></a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- About -->
-<section id="about" class="container">
-  <h1>About Us</h1>
-  <p>Thabiso Holdings provides specialist telecommunication and engineering services across South Africa. We deliver design, installation and ongoing support with ISO 9001:2015 certified processes.</p>
+  <hr class="section-divider" />
 
-  <h2>Management Team</h2>
-  <div class="management-grid">
-    <div class="profile">
-      <img src="assets/images/management/manager_1.jpeg" alt="CEO">
-      <h3>CEO</h3>
-      <div>Abram Moleke</div>
-      <p>Provides strategic leadership and ensures Thabiso delivers innovative, reliable, client-focused solutions.</p>
+  <!-- ABOUT -->
+  <section id="about" class="section-white">
+    <div class="container">
+      <h2>About Us</h2>
+      <p class="lead">Thabiso Holdings provides specialist telecommunication and engineering services across South Africa. We deliver design, installation and ongoing support with ISO 9001:2015 certified processes.</p>
+
+      <h3>Management Team</h3>
+      <div class="management-grid">
+        <!-- 8 profiles (use your existing images in assets/images/management/) -->
+        <div class="profile">
+          <img class="team-photo" src="assets/images/management/manager_1.jpeg" alt="Abram Moleke — CEO">
+          <h4>Abram Moleke</h4>
+          <div class="muted">CEO</div>
+          <p>Provides strategic leadership and ensures Thabiso delivers innovative, reliable, client-focused solutions.</p>
+        </div>
+
+        <div class="profile">
+          <img class="team-photo" src="assets/images/management/manager_2.jpeg" alt="Peter Buthelezi — Sales & Marketing">
+          <h4>Peter Buthelezi</h4>
+          <div class="muted">Sales & Marketing</div>
+          <p>Drives growth by connecting client needs with tailored telecommunications and engineering services.</p>
+        </div>
+
+        <div class="profile">
+          <img class="team-photo" src="assets/images/management/manager_3.jpeg" alt="Tumelo Buthelezi — Financial Manager">
+          <h4>Tumelo Buthelezi</h4>
+          <div class="muted">Financial Manager</div>
+          <p>Manages financial planning, reporting, and control to ensure sustainability and growth.</p>
+        </div>
+
+        <div class="profile">
+          <img class="team-photo" src="assets/images/management/manager_4.jpeg" alt="Caroline Tiro — HR Manager">
+          <h4>Caroline Tiro</h4>
+          <div class="muted">HR Manager</div>
+          <p>Builds a strong, skilled team and fosters a culture of excellence to support client success.</p>
+        </div>
+
+        <div class="profile">
+          <img class="team-photo" src="assets/images/management/manager_5.jpeg" alt="Frans Gafane — Operations Manager">
+          <h4>Frans Gafane</h4>
+          <div class="muted">Operations Manager</div>
+          <p>Oversees project delivery, ensuring efficiency, quality, and on-time completion.</p>
+        </div>
+
+        <div class="profile">
+          <img class="team-photo" src="assets/images/management/manager_6.jpeg" alt="Stephen Phalane — Safety Officer">
+          <h4>Stephen Phalane</h4>
+          <div class="muted">Safety Officer</div>
+          <p>Upholds the highest safety standards, ensuring compliance and secure project environments.</p>
+        </div>
+
+        <div class="profile">
+          <img class="team-photo" src="assets/images/management/manager_7.jpeg" alt="Manager 7">
+          <h4>Manager 7</h4>
+          <div class="muted">Position Title</div>
+          <p>Maintains client relationships, ensuring expectations are clearly understood and exceeded.</p>
+        </div>
+
+        <div class="profile">
+          <img class="team-photo" src="assets/images/management/manager_8.jpeg" alt="Manager 8">
+          <h4>Manager 8</h4>
+          <div class="muted">Position Title</div>
+          <p>Experienced professional with a strong track record in the industry.</p>
+        </div>
+      </div>
     </div>
-    <div class="profile">
-      <img src="assets/images/management/manager_2.jpeg" alt="Sales">
-      <h3>Sales & Marketing</h3>
-      <div>Peter Buthelezi</div>
-      <p>Drives growth by connecting client needs with tailored telecommunications and engineering services.</p>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- SERVICES -->
+  <section id="services" class="section-white">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-grid gallery-grid">
+        <div class="gallery-card">
+          <h4>Telecommunication</h4>
+          <p>RF design, network rollout, fibre & wireless deployment.</p>
+        </div>
+        <div class="gallery-card">
+          <h4>Engineering</h4>
+          <p>Electrical, structural and site installations.</p>
+        </div>
+        <div class="gallery-card">
+          <h4>Project Management</h4>
+          <p>End-to-end delivery and coordination.</p>
+        </div>
+      </div>
     </div>
-    <div class="profile">
-      <img src="assets/images/management/manager_3.jpeg" alt="Finance">
-      <h3>Financial Manager</h3>
-      <div>Tumelo Buthelezi</div>
-      <p>Manages financial planning, reporting, and control to ensure sustainability and growth.</p>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section-white">
+    <div class="container">
+      <h2>Gallery</h2>
+
+      <h3>Telecommunication Projects</h3>
+      <div class="gallery-grid gallery-telecom">
+        <!-- 8 telecom images -->
+        <div class="gallery-card"><img src="assets/images/gallery/telecom/telecom_1.jpg" alt="Telecom 1"></div>
+        <div class="gallery-card"><img src="assets/images/gallery/telecom/telecom_2.jpg" alt="Telecom 2"></div>
+        <div class="gallery-card"><img src="assets/images/gallery/telecom/telecom_3.jpg" alt="Telecom 3"></div>
+        <div class="gallery-card"><img src="assets/images/gallery/telecom/telecom_4.jpg" alt="Telecom 4"></div>
+        <div class="gallery-card"><img src="assets/images/gallery/telecom/telecom_5.jpg" alt="Telecom 5"></div>
+        <div class="gallery-card"><img src="assets/images/gallery/telecom/telecom_6.jpg" alt="Telecom 6"></div>
+        <div class="gallery-card"><img src="assets/images/gallery/telecom/telecom_7.jpg" alt="Telecom 7"></div>
+        <div class="gallery-card"><img src="assets/images/gallery/telecom/telecom_8.jpg" alt="Telecom 8"></div>
+      </div>
+
+      <h3 style="margin-top:28px;">Engineering Projects</h3>
+      <div class="gallery-grid gallery-engineering">
+        <!-- 8 engineering images -->
+        <div class="gallery-card"><img src="assets/images/gallery/engineering/engineering_1.jpg" alt="Eng 1"></div>
+        <div class="gallery-card"><img src="assets/images/gallery/engineering/engineering_2.jpg" alt="Eng 2"></div>
+        <div class="gallery-card"><img src="assets/images/gallery/engineering/engineering_3.jpg" alt="Eng 3"></div>
+        <div class="gallery-card"><img src="assets/images/gallery/engineering/engineering_4.jpg" alt="Eng 4"></div>
+        <div class="gallery-card"><img src="assets/images/gallery/engineering/engineering_5.jpg" alt="Eng 5"></div>
+        <div class="gallery-card"><img src="assets/images/gallery/engineering/engineering_6.jpg" alt="Eng 6"></div>
+        <div class="gallery-card"><img src="assets/images/gallery/engineering/engineering_7.jpg" alt="Eng 7"></div>
+        <div class="gallery-card"><img src="assets/images/gallery/engineering/engineering_8.jpg" alt="Eng 8"></div>
+      </div>
     </div>
-    <div class="profile">
-      <img src="assets/images/management/manager_4.jpeg" alt="HR">
-      <h3>HR Manager</h3>
-      <div>Caroline Tiro</div>
-      <p>Builds a strong, skilled team and fosters a culture of excellence.</p>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- CAREERS -->
+  <section id="careers" class="section-white">
+    <div class="container">
+      <h2>Careers</h2>
+      <p>Apply by filling the form below. Upload your CV (PDF or DOC).</p>
+
+      <form id="careers-form" method="post" enctype="multipart/form-data" style="max-width:720px;margin:auto;">
+        <input class="form-field" name="first_name" placeholder="First name" required />
+        <input class="form-field" name="last_name" placeholder="Last name" required />
+        <input class="form-field" type="email" name="email" placeholder="Email" required />
+        <input class="form-field" name="cellphone" placeholder="Cellphone" required />
+        <label style="display:block;margin-top:8px;color:#666;">Upload CV (PDF, DOC)</label>
+        <input class="form-field" type="file" name="cv" accept=".pdf,.doc,.docx" />
+        <textarea class="form-field" name="message" placeholder="Brief message" rows="5"></textarea>
+        <button class="btn" type="submit">Apply</button>
+      </form>
+
+      <p style="margin-top:12px;">Or contact HR: <strong>peter@thabisoholding.co.za</strong> | Cell: 084 428 6455</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Services -->
-<section id="services" class="container">
-  <h1>Our Services</h1>
-  <div class="gallery-grid">
-    <div class="gallery-card"><h3>Telecommunication</h3><p>RF design, network rollout, fibre & wireless deployment.</p></div>
-    <div class="gallery-card"><h3>Engineering</h3><p>Electrical, structural, and site installations.</p></div>
-    <div class="gallery-card"><h3>Project Management</h3><p>End-to-end delivery.</p></div>
-  </div>
-</section>
+  <hr class="section-divider" />
 
-<!-- Gallery -->
-<section id="gallery" class="container">
-  <h1>Gallery</h1>
-  <div class="gallery-grid">
-    <div class="gallery-card"><img src="assets/images/gallery/img1.jpg" alt=""><p class="figcaption">Project 1</p></div>
-    <div class="gallery-card"><img src="assets/images/gallery/img2.jpg" alt=""><p class="figcaption">Project 2</p></div>
-    <div class="gallery-card"><img src="assets/images/gallery/img3.jpg" alt=""><p class="figcaption">Project 3</p></div>
-  </div>
-</section>
+  <!-- CONTACT -->
+  <section id="contact" class="section-white">
+    <div class="container">
+      <h2>Contact Us</h2>
 
-<!-- Careers -->
-<section id="careers" class="container">
-  <h1>Careers</h1>
-  <p>Join our team by submitting your CV below:</p>
-  <form action="upload.php" method="post" enctype="multipart/form-data">
-    <input type="text" class="form-field" placeholder="Your Name" required>
-    <input type="email" class="form-field" placeholder="Your Email" required>
-    <input type="file" class="form-field" name="cv" accept=".pdf,.doc,.docx" required>
-    <button type="submit" class="btn">Upload CV</button>
-  </form>
-</section>
+      <div class="contact-panel">
+        <p><strong>Address:</strong> 272 Van Der Hoff Str, Hermanstad, Pretoria, 0082</p>
+        <p><strong>Cell:</strong> 084 428 6455 | 072 182 9620</p>
+        <p><strong>Email:</strong> thabisoengineering@yahoo.com | peter@thabisoholding.co.za</p>
+        <p><strong>Company emails:</strong> info@thabisoholding.co.za, sales@thabisoholding.co.za, accounts@thabisoholding.co.za</p>
+      </div>
 
-<!-- Contact -->
-<section id="contact" class="container">
-  <h1>Contact Us</h1>
-  <form>
-    <input type="text" class="form-field" placeholder="Your Name" required>
-    <input type="email" class="form-field" placeholder="Your Email" required>
-    <textarea class="form-field" rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit" class="btn">Send Message</button>
-  </form>
+      <form id="contact-form" style="max-width:720px;margin-top:16px;">
+        <input class="form-field" name="name" placeholder="Your name" required />
+        <input class="form-field" name="email" type="email" placeholder="Your email" required />
+        <select class="form-field" name="category">
+          <option>Telecommunication</option>
+          <option>Engineering</option>
+        </select>
+        <select class="form-field" name="department">
+          <option data-email="info@thabisoholding.co.za">Info</option>
+          <option data-email="sales@thabisoholding.co.za">Sales</option>
+          <option data-email="accounts@thabisoholding.co.za">Accounts</option>
+        </select>
+        <textarea class="form-field" name="message" placeholder="Message" rows="5" required></textarea>
+        <button class="btn" type="submit">Send</button>
+      </form>
 
-  <div style="margin-top:20px;">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18..."
-            width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"></iframe>
-  </div>
-</section>
+      <div style="margin-top:18px;">
+        <iframe
+          src="https://maps.google.com/maps?q=272+Van+Der+Hoff+Str+Hermanstad+Pretoria+0082&output=embed"
+          width="100%" height="320" style="border:0;border-radius:8px;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
 
-<!-- Blog -->
-<section id="blog" class="container">
-  <h1>Blog</h1>
-  <p>Latest news and updates will appear here.</p>
-</section>
+  <hr class="section-divider" />
 
-<!-- Downloads -->
-<section id="downloads" class="container">
-  <h1>Downloads</h1>
-  <ul>
-    <li><a href="assets/downloads/company_profile.pdf" target="_blank">Company Profile</a></li>
-    <li><a href="assets/downloads/catalogue.pdf" target="_blank">Catalogue</a></li>
-  </ul>
-</section>
+  <!-- BLOG -->
+  <section id="blog" class="section-white">
+    <div class="container">
+      <h2>News & Updates</h2>
+      <div class="gallery-grid">
+        <article class="gallery-card"><h4>Post Title 1</h4><p>Short summary of the blog post...</p></article>
+        <article class="gallery-card"><h4>Post Title 2</h4><p>Another update here...</p></article>
+        <article class="gallery-card"><h4>Post Title 3</h4><p>Latest company news...</p></article>
+      </div>
+    </div>
+  </section>
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;">
-    <div>Thabiso Holdings — 272 Van Der Hoff Str, Hermanstad, Pretoria, 0082</div>
-    <div>© 2025 Thabiso Holdings</div>
-  </div>
-</footer>
+  <hr class="section-divider" />
 
-<script src="assets/js/main.js"></script>
-<script>
-  // Mobile menu toggle
-  const menuToggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.nav');
-  menuToggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
-    document.body.classList.toggle('menu-open');
-  });
+  <!-- DOWNLOADS -->
+  <section id="downloads" class="section-white">
+    <div class="container">
+      <h2>Downloads</h2>
+      <ul>
+        <li><a href="assets/docs/company-profile.pdf" download>Company Profile (PDF)</a></li>
+        <li><a href="assets/docs/services-brochure.pdf" download>Services Brochure (PDF)</a></li>
+      </ul>
+    </div>
+  </section>
 
-  // Matrix animation
-  const canvas = document.getElementById('matrix');
-  const ctx = canvas.getContext('2d');
-  canvas.height = window.innerHeight;
-  canvas.width = window.innerWidth;
-  const letters = Array(256).join("1").split("");
-  setInterval(() => {
-    ctx.fillStyle = "rgba(0,0,0,0.05)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "#00bfff";
-    letters.map((y_pos, index) => {
-      const text = Math.random() > 0.5 ? "0" : "1";
-      const x_pos = index * 10;
-      ctx.fillText(text, x_pos, y_pos);
-      letters[index] = y_pos > 758 + Math.random() * 1e4 ? 0 : parseInt(y_pos) + 10;
-    });
-  }, 60);
-</script>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+      <div>Thabiso Holdings — 272 Van Der Hoff Str, Hermanstad, Pretoria, 0082</div>
+      <div>© 2025 Thabiso Holdings</div>
+    </div>
+  </footer>
+
+  <!-- JS (we'll provide a full main.js next) -->
+  <script src="assets/js/main.js"></script>
+
 </body>
 </html>
